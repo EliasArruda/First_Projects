@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&display=swap');
+
+*
+{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Inconsolata', monospace;
+}
+
+body
+{
+  width: 100%;
+  height: 100%;
+  background-image: url('../pages/IMG/wallpaper_chat.jpg');
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+input
+{
+  -webkit-animation: startAnimation 1.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: startAnimation 1.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+input:hover
+{
+  -webkit-animation: startAnimation 1.8s cubic-bezier(0, 0, 0, 1) both;
+	        animation: startAnimation 1.8s cubic-bezier(0, 0, 0, 1) both;
+}
+
+@keyframes startAnimation {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px);
+            transform: translateZ(-700px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+
+.FormAnimation
+{
+  -webkit-animation: FormAnimation 3.2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: FormAnimation 3.2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@keyframes FormAnimation 
+{
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+}
+
+.btnConfirm:hover
+{
+  background: rgba(46, 229, 157, 0.4);
+}

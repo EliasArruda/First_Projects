@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&display=swap');
+
+
+*
+{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Inconsolata', monospace;
+}
+
+#topNavBar
+{
+  background: url('../../public/wallpaper_TopNav.png') no-repeat center center fixed;
+  /* background-color: #121212; */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#btnCadastro
+{
+  animation: cadastroAnim 4.4s both ease-in-out;
+}
+
+.AnimationIcon
+{
+  display: block;
+  position: absolute;
+  margin-bottom: 0;
+  animation: iconUP 4.4s infinite ease-in-out;
+}
+
+.titleAnimation 
+{
+	animation: titleAnimation 1.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.buttonAnimation 
+{
+	animation: buttonAnimation 3.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.rotate-center 
+{
+	-webkit-animation: rotate-center 2s ease-in-out both;
+	        animation: rotate-center 2s ease-in-out both;
+}
+
+@keyframes cadastroAnim
+{
+  0%
+  {
+    width: 0rem;
+    height: 0;
+    font-size: 0pt;
+  }
+  50%
+  {
+    width: 5rem;
+    height: 1rem;
+  }
+  100%
+  {
+    width: 10rem;
+    height: 2rem;
+  }
+}
+
+@keyframes buttonAnimation
+{
+  0%
+  {
+    width: 0rem;
+    height: 0;
+    font-size: 0pt;
+  }
+  50%
+  {
+    width: 11rem;
+    height: 1.5rem;
+  }
+  100%
+  {
+    width: 21rem;
+    height: 3rem;
+  }
+}
+
+@keyframes titleAnimation 
+{
+  0% 
+  {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-800px);
+            transform: translateZ(-800px);
+    -webkit-filter: blur(5px);
+            filter: blur(5px);
+    opacity: 0;
+  }
+
+  100% 
+  {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}
+
+@keyframes iconUP
+{
+  0%
+  {
+    margin-top: 0rem;
+  }
+
+  50%
+  {
+    margin-top: -4rem;
+  }
+}
+
+@keyframes rotate-center 
+{
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+/* Menu Animation */
+
+.contain {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+/* Fade out the second bar */
+.change .bar2 {opacity: 0;}
+
+/* Rotate last bar */
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+::-webkit-scrollbar
+{
+  display: none;
+}

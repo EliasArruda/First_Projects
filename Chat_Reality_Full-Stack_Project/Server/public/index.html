@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <main
+    id='container--Chat'
+    class='
+    rounded-3xl
+    sm:h-[40rem]
+    sm:w-[22.5rem]
+    sm:top-[4.5rem]
+    md:w-[43rem]
+    md:h-[50rem]
+    md:top-[10rem]
+    lg:w-[46rem]
+    lg:h-[48rem]
+    lg:top-[1.3rem]
+    grid
+    grid-rows-1
+    relative
+    bg-opacity-70
+    top-[1rem]
+    mx-auto
+    bg-[black]
+    '>
+
+    <dialog
+    class="
+    relative
+    block
+    mx-auto
+    text-center
+    sm:w-[16rem]
+    sm:h-[20rem]
+    md:w-[25rem]
+    lg:w-[28rem]
+    lg:h-[24rem]
+    rounded-3xl
+    top-[6rem]
+    bg-sky-700
+    bg-opacity-60
+    " 
+    open>
+    
+    <h1
+    class="
+    relative
+    block
+    top-[1rem]
+    text-[20pt]
+    mb-[3rem]
+    ">
+    DEFINA UM NOME PRA CONVERSAR NO CHAT
+    </h1>
+
+    <input
+    maxlength="20"
+    id='valueInpt'
+    class="
+    block
+    sm:w-[15rem]
+    relative
+    mx-auto
+    mb-[2rem]
+    w-[30rem]
+    h-[3rem]
+    text-center
+    rounded-3xl
+    text-white
+    bg-[black]
+    "
+    placeholder="Seu Usuario" 
+    type="text" 
+    id="userInput">
+
+    <button
+    id="btnConfirmName"
+    class="
+    sm:w-[15rem]
+    w-[20rem]
+    h-[3rem]
+    bg-[black]
+    text-white
+    rounded-3xl
+    "
+    >Confirmar</button>
+    </dialog>
+
+
+
+    <article 
+    class='
+    overflow-scroll
+    overflow-y-auto
+    overflow-x-hidden
+    text-white
+    w-full
+    h-full
+    '>
+
+    <ul 
+    class="ul" 
+    id="messages">
+    </ul>
+    
+    </article>
+    
+    
+    <div class='
+    send
+    '>
+
+    <input
+    maxlength="66"
+    class="
+    text-center
+    block
+    relative
+    text"  
+    id="menssagem"  
+    placeholder="O que você está pensando?..."
+    />
+
+    <button
+    class="btn
+    block
+    w-full
+    h-[3rem]
+    text-white
+    relative
+    mx-auto
+    text-center
+    " 
+    id="enviar_menssagem"
+    >Send</button>
+    </div>
+    </main>
+    
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/script.js"></script>
+<script>
+
+/** @type {import('tailwindcss').Config} */
+tailwind.config = {
+  theme: {
+
+    screens: {
+      'sm': '320px',
+      // => @media (min-width: 640px) { ... }
+
+      'md': '520px',
+      // => @media (min-width: 768px) { ... }
+
+      'lg': '800px',
+      // => @media (min-width: 1024px) { ... }
+    },
+
+    extend: {},
+  },
+  plugins: [],
+}
+
+</script>
+</html>
